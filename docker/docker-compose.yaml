@@ -1,0 +1,30 @@
+version: '3.1'
+services:
+  odoo:
+    image: odoo
+    ports:
+      - 8069:8069
+    volumes:
+      - C:Erronka/odoo-data:/var/lib/odoo
+    depends_on:
+      - db
+    container_name: odoo
+  db:
+    image: postgres:15
+    restart: always
+    volumes:
+      - ${PWD}/odoo-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres
+    container_name: db
+  weborria:
+    image: nginx
+    restart: always
+    ports:
+      - 8080:80
+    container_name: WebOrria
+volumes:
+  odoo-db:
+  odoo-data:
