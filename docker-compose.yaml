@@ -27,22 +27,48 @@ services:
     volumes:
       - ngixn-data:/usr/share/nginx/html:ro
     container_name: WebOrria
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+      - CLI_ARGS= #optional
+    volumes:
+      - duplicati-backups:/backups
+      - duplicati-source:/source
+    ports:
+      - 8200:8200
+    restart: unless-stopped
 volumes:
   ngixn-data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: C:/Erronka/web
+      device: C:/Erronka/container/web
   odoo-data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: C:/Erronka/odoo-data
+      device: C:/Erronka/container/odoo-data
   odooDB:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: C:/Erronka/odooDB
+      device: C:/Erronka/container/odooDB
+  duplicati-backups:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/duplicati/backups
+  duplicati-source:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/container
