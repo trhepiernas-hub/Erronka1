@@ -21,7 +21,9 @@ services:
     container_name: db
   weborria:
     image: nginx
-    build: https://github.com/trhepiernas-hub/Erronka1.git#main
+    build: 
+      context: https://github.com/trhepiernas-hub/Erronka1.git#main
+      dockerfile: ./dockerfile
     restart: always
     ports:
       - 8080:80
