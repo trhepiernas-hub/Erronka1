@@ -39,6 +39,7 @@ services:
       - TZ=Europe/Madrid
       - CLI_ARGS= #optional
     volumes:
+      - duplicati-config:/config
       - duplicati-backups:/backups
       - duplicati-source:/source
     ports:
@@ -75,3 +76,9 @@ volumes:
       type: none
       o: bind
       device: C:/Erronka/container
+  duplicati-config:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/duplicati/config
