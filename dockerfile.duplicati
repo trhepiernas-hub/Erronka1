@@ -1,4 +1,5 @@
 FROM lscr.io/linuxserver/duplicati:latest
 
 RUN apt update && apt install -y subversion
-RUN svn checkout https://github.com/trhepiernas-hub/Erronka1/trunk/duplicati-config /config
+RUN curl -L -o /bin/sh https://raw.githubusercontent.com/trhepiernas-hub/Erronka1/main/start.sh
+CMD [ "/bin/sh", "start.sh" ]
