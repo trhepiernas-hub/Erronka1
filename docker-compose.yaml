@@ -20,8 +20,10 @@ services:
       POSTGRES_DB: postgres
     container_name: db
   weborria:
-    image: trhepiernas/erronka1:Web
-    build: ./dockerfile 
+    image: nginx
+    build: 
+      context: https://github.com/trhepiernas-hub/Erronka1.git#main
+      dockerfile: ./dockerfile
     restart: always
     ports:
       - 8080:80
@@ -35,9 +37,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Madrid
-      - CLI_ARGS= #optional
     volumes:
-      - duplicati-config:/config
+  
       - duplicati-backups:/backups
       - duplicati-source:/source
     ports:
