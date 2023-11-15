@@ -6,7 +6,8 @@
 
 - github-etik repositorio hau deskargatuko dugu `git clone https://github.com/trhepiernas-hub/Erronka1` 
 - behin deskargatuta deskargatutako karpetatara juango gara eta  `docker-compose up` jarriko dugu terminalean.
-- azkenik gure odoo zerbizarira sartu beharko gara erabiltzailea datubase eta pasaitz bat sortu beharko dugu.
+- odoo zerbizarira sartu beharko gara erabiltzailea datubase eta pasahitz bat sortu beharko dugu.
+- azkenik duplicati aplikazioan sartu eta sources karpeta backus karpetara guk dai degun frezuektziarekin segurtasun kopia egitea konfiguratu
 - eta horrela gure sistema prest dago erabitzeko.
 
 ### Bigarren aukera
@@ -100,6 +101,10 @@ volumes:
       o: bind
       device: C:/Erronka/duplicati/config
 ```
+
+- odoo zerbizarira sartu beharko gara erabiltzailea datubase eta pasahitz bat sortu beharko dugu.
+- azkenik duplicati aplikazioan sartu eta sources karpeta backus karpetara guk dai degun frezuektziarekin segurtasun kopia egitea konfiguratu
+- eta horrela gure sistema prest dago erabitzeko.
 
 ## Dituen aplikazioak
 
