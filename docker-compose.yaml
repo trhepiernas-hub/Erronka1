@@ -23,7 +23,7 @@ services:
     image: nginx
     build: 
       context: https://github.com/trhepiernas-hub/Erronka1.git#main
-      dockerfile: ./dockerfile
+      dockerfile: ./dockerfile.nginx
     restart: always
     ports:
       - 8080:80
@@ -33,12 +33,14 @@ services:
   duplicati:
     image: lscr.io/linuxserver/duplicati:latest
     container_name: duplicati
+    build: 
+      context: https://github.com/trhepiernas-hub/Erronka1.git#main
+      dockerfile: ./dockerfile.duplicati
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Madrid
     volumes:
-  
       - duplicati-backups:/backups
       - duplicati-source:/source
     ports:
