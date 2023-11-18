@@ -1,66 +1,97 @@
-<!DOCTYPE html>
-<html lang="es">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>KOBAZ CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="irudiak/kokod_logoa.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="css/kontaktatu.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <a href="index.html">HASIERA</a>
+        <a href="norGara.html">NOR GARA</a>
+        <a href="produktuak.html">PRODUKTUA</a>
+        <a href="kontaktatu.html">KONTAKTATU</a>
+      </div>
+      <div class="textos-header">
+        <h3>GALDERAREN BAT BALDIN BADAZU KONTAKTATU GUREKI</h3>
+        <h1>KOBAZ-CRM</h1>
+      </div>
+      <div class="wave" style="height: 150px; overflow: hidden"></div>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KOKOD-KOTAKTATU</title>
-    <link rel="shortcut icon" href="irudiak/kokod_logoa.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/kontaktatu.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">HASIERA</a>
-            <a href="norGara.html">NOR GARA</a>
-            <a href="produktuak.html">PRODUKTUA</a>
-            <a href="kontaktatu.html">KONTAKTATU</a>
-        </nav>
-        <section class="textos-header">
-            <h1 id="magia">KOBAZ</h1>
-            <h3>KONTAKTATU</h3>
-        </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg></div>
-    </header>
-    <body>  
-        <form>
-            <label for="izena">Izena:</label><br>
-            <input type="text" id="izena" name="izena" pattern="[A-Za-z]+" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="telefonoa">Telefonoa:</label><br>
-            <input type="tel" id="telefonoa" name="telefonoa" pattern="[0-9]+" required><br>
-            <label for="enpresaIzena">Enpresa Izena:</label><br>
-            <input type="text" id="enpresaIzena" name="enpresaIzena" pattern="[A-Za-z]+" required><br>
-            <label for="gaia">Gaia:</label><br>
-            <input type="text" id="gaia" name="gaia" pattern="[A-Za-z]+" required><br>
-            <label for="mezua">Mezua:</label><br>
-            <textarea id="mezua" name="mezua" pattern="[A-Za-z]+" required></textarea><br>
-            <input type="submit" value="Submit">
-          </form> 
-    <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>Phone</h4>
-                <p>+34 943 65 11 47</p>
-            </div>
-            <div class="content-foo">
-                <h4>Email</h4>
-                <p>info.kobaz@kobaz.com</p>
-            </div>
-            <div class="content-foo">
-                <h4>Location</h4>
-                <p> Ategorrietako Galtzada Zaharra, 28, 20013 Donostia, Gipuzkoa</p>
-            </div>
+    <div class="kontaktuaFontsect">
+      <div class="irudia01"></div>
+      <form class="formKontaktua" action="#" method="post">
+        <fieldset class="kontaktuaInfo">
+          <legend>Kontaktatu</legend>
+          <label for="izena">Izena:</label>
+          <input
+            type="text"
+            id="izena"
+            name="izena"
+            value="Idatzu zure izena."
+          /><br />
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            value="Idatzu zure emaila."
+          /><br />
+          <label for="telefonoa">Telefonoa:</label>
+          <input
+            type="text"
+            id="telefonoa"
+            name="telefonoa"
+            value="Idatzu zure enpersako telefono zenbakia."
+          /><br />
+          <label for="enpresaIzena">Enpresa Izena:</label>
+          <input
+            type="text"
+            id="enpresaIzena"
+            name="enpresaIzena"
+            value="Idatzu zure enpresaren izena."
+          /><br />
+          <label for="gaia">Gaia:</label>
+          <input
+            type="text"
+            id="gaia"
+            name="gaia"
+            value="Idatzu zure gaia."
+          /><br />
+          <label for="mezua">Mezua:</label>
+          <textarea id="mezua" name="mezua" cols="30" rows="10"></textarea
+          ><br />
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="contenedor-footer">
+        <div class="content-foo">
+          <h4>Phone</h4>
+          <p>+34 943 65 11 47</p>
         </div>
-        <h2 class="titulo-final">&copy; kobaz | Asa, Hegoi eta Iker</h2>
-    </footer>
-</body>
-
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>info.kobaz@kobaz.com</p>
+        </div>
+        <div class="content-foo">
+          <h4>Location</h4>
+          <p>Ategorrietako Galtzada Zaharra, 28, 20013 Donostia, Gipuzkoa</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; kobaz | Asa, Hegoi eta Iker</h2>
+    </div>
+  </body>
 </html>
