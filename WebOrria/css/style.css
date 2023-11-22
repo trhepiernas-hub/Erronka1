@@ -530,3 +530,9 @@ label:after {
   color: red;
   label: "*";
 }
+
+@media all and (max-width: 800px) {
+ .produktua-kontenedorea {
+  flex-direction: column;
+ }
+}
